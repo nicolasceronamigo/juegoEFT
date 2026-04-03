@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cs1b8nj76xamp"]
+
+[ext_resource type="Script" uid="uid://bmfgi4gdyfnep" path="res://scripts/pieza.gd" id="1_lgp2m"]
+[ext_resource type="TileSet" uid="uid://pd3er4n1bynb" path="res://tilesets/pieza.tres" id="2_lgp2m"]
+[ext_resource type="Script" uid="uid://c353f7p3th3bd" path="res://scripts/tiles_pieza.gd" id="2_vmh0h"]
+[ext_resource type="Texture2D" uid="uid://35hk53yxdq7y" path="res://assets/sprites/sprite_puerta.png" id="4_f6kpm"]
+
+[node name="Pieza" type="Node2D" unique_id=1837309966]
+script = ExtResource("1_lgp2m")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1814203338]
+tile_set = ExtResource("2_lgp2m")
+script = ExtResource("2_vmh0h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1307367478]
+visible = false
+position = Vector2(416, 224)
+texture = ExtResource("4_f6kpm")
+
+[connection signal="pieza_creada" from="." to="TileMapLayer" method="_on_pieza_pieza_creada"]

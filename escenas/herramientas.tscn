@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dafaw87d1o25b"]
+
+[ext_resource type="Script" uid="uid://dfgqnk7tmglj4" path="res://scripts/herramientas.gd" id="1_cods3"]
+
+[node name="Herramientas" type="Node" unique_id=964729198]
+script = ExtResource("1_cods3")

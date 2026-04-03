@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c6kjm8a3nyupk"]
+
+[ext_resource type="Script" uid="uid://cgmyngic8fsrq" path="res://scripts/diccionarios.gd" id="1_t0p0w"]
+
+[node name="Diccionarios" type="Node" unique_id=528786316]
+script = ExtResource("1_t0p0w")

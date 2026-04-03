@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cf5e42v35dqvh"]
+
+[ext_resource type="Script" uid="uid://b4siuannh78bs" path="res://scripts/piezas/dormitorio.gd" id="1_sw7q4"]
+[ext_resource type="TileSet" uid="uid://pd3er4n1bynb" path="res://tilesets/pieza.tres" id="2_hmwu4"]
+[ext_resource type="Script" uid="uid://c353f7p3th3bd" path="res://scripts/piezas/tiles_pieza.gd" id="3_bc2uc"]
+
+[node name="Dormitorio" type="Node2D" unique_id=1837309966]
+script = ExtResource("1_sw7q4")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1814203338]
+tile_set = ExtResource("2_hmwu4")
+script = ExtResource("3_bc2uc")
+
+[connection signal="pieza_creada" from="." to="TileMapLayer" method="_on_pieza_pieza_creada"]

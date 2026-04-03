@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://db44001fiwfg8"]
+
+[ext_resource type="Script" uid="uid://cpcxa0s8elc8g" path="res://scripts/edificios/edificio.gd" id="1_g1fq2"]
+[ext_resource type="TileSet" uid="uid://pd3er4n1bynb" path="res://tilesets/pieza.tres" id="2_skyiq"]
+[ext_resource type="Script" uid="uid://b26008syibhqr" path="res://scripts/edificios/tiles_edificio.gd" id="3_y6fr7"]
+
+[node name="Edificio" type="Node2D" unique_id=1836980705]
+script = ExtResource("1_g1fq2")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1124055279]
+tile_set = ExtResource("2_skyiq")
+script = ExtResource("3_y6fr7")
+
+[connection signal="edificio_creado" from="." to="TileMapLayer" method="_on_edificio_edificio_creado"]

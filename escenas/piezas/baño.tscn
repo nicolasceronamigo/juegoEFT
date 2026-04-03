@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c7delvhfjubb6"]
+
+[ext_resource type="TileSet" uid="uid://pd3er4n1bynb" path="res://tilesets/pieza.tres" id="1_511l0"]
+[ext_resource type="Script" uid="uid://byo08ns0f8kgx" path="res://scripts/piezas/baño.gd" id="1_nys54"]
+[ext_resource type="Script" uid="uid://c353f7p3th3bd" path="res://scripts/piezas/tiles_pieza.gd" id="3_s405v"]
+
+[node name="Baño" type="Node2D" unique_id=1837309966]
+script = ExtResource("1_nys54")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1814203338]
+tile_set = ExtResource("1_511l0")
+script = ExtResource("3_s405v")
+
+[connection signal="pieza_creada" from="." to="TileMapLayer" method="_on_pieza_pieza_creada"]

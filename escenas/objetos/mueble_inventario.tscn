@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ce7sdirm1d4ck"]
+
+[ext_resource type="Script" uid="uid://60ri2ce1f58e" path="res://scripts/objetos/mueble_inventario.gd" id="1_c7fe1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c7fe1"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bgvp"]
+radius = 32.0
+
+[node name="MuebleInventario" type="StaticBody2D" unique_id=1062461539]
+collision_layer = 4
+collision_mask = 15
+script = ExtResource("1_c7fe1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=42390551]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1915922696]
+shape = SubResource("CircleShape2D_c7fe1")
+
+[node name="ZonaProximidad" type="Area2D" parent="." unique_id=1714242096]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaProximidad" unique_id=869586966]
+shape = SubResource("CircleShape2D_1bgvp")
