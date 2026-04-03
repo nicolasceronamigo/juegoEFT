@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var rapidez := 300
+@export var rapidez := 400
 
 var objetos_en_alcance: Array[Node2D] = []
 
